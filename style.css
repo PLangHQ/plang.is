@@ -1,0 +1,385 @@
+body {
+    max-width: 980px;
+    margin:2rem auto;
+}
+
+/* Base styles for code element */
+code {
+    display: block; /* Makes the code block level */
+    background-color: #f7f9fc; /* Light gray background */
+    padding: 15px;
+    margin: 15px 0; 
+    border: 1px solid #e1e4e8; /* Light gray border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 14px;
+    line-height: 1.5;
+    color: #24292e; /* Dark gray font color */
+    overflow-x: auto; /* Adds horizontal scroll if content overflows */
+    white-space: pre; /* Preserves whitespace and line breaks */
+}
+
+/* Styles for specific code content */
+code .keyword {
+    color: #d73a49; /* Red color for keywords or important notes */
+    font-weight: bold;
+}
+
+code .url {
+    color: #0366d6; /* Blue color for URLs */
+    text-decoration: underline; /* Underline for URL for better differentiation */
+}
+
+code .filename {
+    color: #6f42c1; /* Purple color for filenames */
+}
+
+code .variable {
+    color: #005cc5; /* Darker blue color for variables/placeholders */
+}
+
+.terminal {
+    font-family: 'Monaco', 'Menlo', 'Consolas', 'Courier New', monospace;
+    background-color: #1e1e1e;
+    color: #a6e22e; /* A bright green typical of many terminals */
+    padding: 10px 15px;
+    border: 1px solid #777;
+    border-radius: 5px;
+    white-space: pre;
+    overflow: auto;
+    margin:0.5rem;
+}
+
+.terminal::before {
+    content: '$ '; /* A typical command prompt symbol */
+    color: #f92672; /* A bright pink color for the command symbol */
+}
+
+
+
+.header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+
+.title {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    color: #777;
+}
+
+.links a {
+    text-decoration: none;
+    color: #333;
+    margin: 0 10px;
+    font-weight: bold;
+}
+
+.links a:hover {
+    text-decoration: underline;
+}
+
+
+.content .row {
+    margin-bottom: 40px;
+}
+.row {
+    padding:0.6rem 0;
+    margin:0.3rem 0;
+    border-radius: 10px;
+}
+.features > .row, .white, .tile {
+    background-color: #efeff1;
+}
+.screenshot {
+    width: 100%;
+    max-width: 100%;
+    border-radius: 5px;
+    width: fit-content;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom:0.5rem;
+}
+h2.large {
+    font-size:3rem;
+    margin-top: 0.7rem;
+}
+.card {
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.order-md-1, .order-md-2 {
+    padding: 1rem 2rem;
+}
+.header {
+    background-color: #efeff1;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.05);
+    margin-bottom: 1rem;
+}
+
+.text-content {
+    padding-right: 50px; /* Add some spacing between the text and the logo */
+}
+
+.logo-container {
+    text-align: center; /* Center-align the logo in its column */
+}
+
+.logo {
+    width: 155px; /* Increased size, adjust as needed */
+    display: block;
+    margin: 0 auto;
+}
+
+.title {
+    font-size: 3em;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: #364d5d;
+}
+
+.subtitle {
+    font-size: 1.5em;
+    margin-bottom: 30px;
+    color: #555;
+    font-weight: lighter;
+}
+
+.links a {
+    text-decoration: none;
+    color: #333;
+    margin: 0 10px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.links a:hover {
+    color: #007BFF;
+}
+
+
+.info-box {
+    background-color: #FFFFFF; /* White background */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.08); /* Subtle shadow for depth */
+    transition: transform 0.3s ease; /* Smooth transform transition */
+    height: 100%; /* Make sure all boxes have equal height */
+}
+
+.info-box:hover {
+    transform: translateY(-5px); /* Slight upward movement on hover */
+}
+h1, h2, h3, h4, h3.card-title {
+    color:#536673;
+}
+.info-box h4 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    color: #536673; /* Dark text for the heading */
+}
+
+.info-box p {
+    font-size: 1em;
+    color: #555; /* Slightly lighter text for the content */
+}
+
+.cascading-tiles {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 0 auto;
+}
+
+.alert-warning {
+    --bs-alert-color: var(--bs-warning-text-emphasis);
+    --bs-alert-bg: #d1cfc7;
+    --bs-alert-border-color: #b15c0a;
+    --bs-alert-link-color: var(--bs-warning-text-emphasis);
+    color: #784106;
+    /* font-weight: bold; */
+    border-width: 0;
+    margin-top: 1.4rem;
+    font-size: 0.9rem;
+    margin-bottom: 0.4rem;
+}
+.content-lg {margin-top:3rem;}
+.tile {
+    
+    padding: 30px;
+    margin: 20px 0;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    width: 80%;
+    text-align: center;
+}
+
+.tile-middle {
+    position: relative;
+    margin-left: 30%;
+    width: 70%;
+}
+
+.tile-last {
+    margin-left: 10%;
+    width: 80%;
+    
+}
+ footer a {
+    color:#1c262d; 
+ }
+.text .content-lg {
+    margin:3rem;
+    padding: 3rem;
+    background-color: #fff;
+}
+.puffin2logo {
+    position: absolute;
+    left:-20%;
+    margin:0;
+    width:150px;
+}
+
+.tile h2 {
+    font-size: 1.8em;
+    margin-bottom: 15px;
+}
+
+.tile p {
+    font-size: 1.2em;
+    margin-bottom: 15px;
+}
+
+.divider {
+    border: 0;
+    height: 2px;  /* Thickness of the divider */
+    background-image: linear-gradient(to right, transparent, #293e4d, transparent);  /* Gradient effect */
+    margin: 1rem 0;  /* Spacing above and below the divider */
+    width: 100%;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);  /* Shadow for depth */
+}
+
+
+body {
+    font-family: 'Raleway', sans-serif;
+    background-color: #617f95;
+    color: #333;
+    padding: 20px;
+}
+.bage {
+    background-color: #dbdbdb;
+    padding: 14px 18px 28px 18px;
+}
+.bage h2 {
+    margin-bottom: 1rem;
+}
+.feature_headline {
+    color:#efeff1;
+}
+.feature-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .feature-item {
+    text-align: center;
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 300px;
+  }
+  
+  .feature-item h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #415e73;
+  }
+  
+  .feature-item p {
+    font-size: 14px;
+    color: #777;
+  }
+  
+
+  .price-table {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .price-item {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: calc(33.33% - 20px);
+  }
+  
+  .price-item h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .price-details {
+    justify-content: space-between;
+    margin-bottom: 10px;
+  }
+  
+  .price-details span {
+    font-size: 16px;
+  }
+  
+  .price-item p {
+    font-size: 14px;
+    color: #777;
+  }
+  
+@media (max-width: 768px) {
+    /* Select the element you want to style for mobile phones */
+    .cascading-tiles, .tile, .tile-middle, .tile-last {
+      /* Set the desired width for mobile phones */
+        width: 100%;
+        max-width: 100%;
+        margin:0;
+        margin-top: 0.3rem;
+        padding:0.5rem;
+        display: block;
+    }
+    .cascading-tiles{
+        padding:0;
+        margin:0;
+    }
+    .price-item , .price-table {
+        display: block;
+        width: auto;
+        margin-bottom: 0.3rem;
+    }
+    .logo {
+        height: 100px;
+        width: auto;
+    }
+
+    .title {
+        font-size: 2rem;
+    }
+    .subtitle {
+        font-size:1rem;
+    }
+  }
