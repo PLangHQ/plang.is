@@ -1,0 +1,19 @@
+Create documentation for installing Plang executable for each operating system(Windows, Linux, Macosx)
+This documentation will be used for plang.is/install
+This is the youtube link to install video, https://www.youtube.com/watch?v=jYEqoIeAoBg, embed it into the html with Windows info with title "Install on Windows"
+ 
+Show how to add the PATH to the OS for each of them
+
+url to download executable
+- Windows: https://github.com/PLangHQ/plang/plang.exe
+- Macosx: https://github.com/PLangHQ/plang/plang
+- Linux: https://github.com/PLangHQ/plang/plang
+
+Write step by step guide for a beginner.
+Write instruction on how to use plang executable in the console/terminal for each OS
+
+Arguments available
+- plang build = this will build plang code
+- plang run = this will run plang code, it will run Start.goal
+    - plang run GoalName = this will run a specific Goal file
+- plang exec = this will first run build then run

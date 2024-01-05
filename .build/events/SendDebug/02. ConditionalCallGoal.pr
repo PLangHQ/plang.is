@@ -1,0 +1,16 @@
+{
+  "Action": {
+    "Name": "GoToLineIfResponseGoToIsNotNull",
+    "Code": "public static bool Process(dynamic responseαgo_to) {\n\treturn responseαgo_to != null;\n}",
+    "Using": null,
+    "Parameters": {
+      "response.go_to": "dynamic"
+    },
+    "GoalToCallOnTrue": "GoToLine",
+    "GoalToCallOnFalse": null
+  },
+  "Text": "if %response.go_to% is not null then call GoToLine line=%response.go_to%",
+  "Reload": false,
+  "LlmQuestion": null,
+  "RunOnBuild": false
+}
