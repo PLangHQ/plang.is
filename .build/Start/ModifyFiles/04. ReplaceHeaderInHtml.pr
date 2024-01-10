@@ -1,0 +1,29 @@
+{
+  "Action": {
+    "Name": "ReplaceHeaderInHtml",
+    "Code": "\npublic static class ReplaceHeaderInHtml\n{\n    public static void Process(string header, ref string html, PLang.SafeFileSystem.PLangFileSystem fileSystem)\n    {\n        if (html.Contains(\"<!--header-->\"))\n        {\n            html = html.Replace(\"<!--header-->\", header);\n        }\n        else\n        {\n            throw new Exception(\"The placeholder for the header was not found in the HTML.\");\n        }\n    }\n}\n",
+    "Using": [
+      "System",
+      "PLang.SafeFileSystem"
+    ],
+    "Parameters": {
+      "header": "string",
+      "html": "string",
+      "fileSystem": "PLang.SafeFileSystem.PLangFileSystem"
+    },
+    "OutParameterDefinition": {
+      "html": [
+        {
+          "Name": "html",
+          "FullTypeName": "System.String"
+        }
+      ]
+    },
+    "GoalToCallOnTrue": null,
+    "GoalToCallOnFalse": null
+  },
+  "Text": "[code] replace '<!--header-->' with %header% in %html%, write to %html%",
+  "Reload": false,
+  "LlmQuestion": null,
+  "RunOnBuild": false
+}

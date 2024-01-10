@@ -1,0 +1,25 @@
+{
+  "Action": {
+    "Name": "ReplaceFooterInHtml",
+    "Code": "\nusing System;\nusing System.Dynamic;\n\npublic static class ReplaceFooterInHtml\n{\n    public static void Process(string footer, ref string html)\n    {\n        if (string.IsNullOrEmpty(footer) || string.IsNullOrEmpty(html))\n        {\n            throw new Exception(\"Footer or Html cannot be empty.\");\n        }\n\n        html = html.Replace(\"<!--footer-->\", footer);\n    }\n}\n",
+    "Using": null,
+    "Parameters": {
+      "footer": "string",
+      "html": "string"
+    },
+    "OutParameterDefinition": {
+      "html": [
+        {
+          "Name": "html",
+          "FullTypeName": "System.String"
+        }
+      ]
+    },
+    "GoalToCallOnTrue": null,
+    "GoalToCallOnFalse": null
+  },
+  "Text": "[code] replace '<!--footer-->' with %footer% in %html%, write to %html%",
+  "Reload": false,
+  "LlmQuestion": null,
+  "RunOnBuild": false
+}

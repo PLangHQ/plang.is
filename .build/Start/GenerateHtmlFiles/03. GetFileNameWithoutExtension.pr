@@ -1,0 +1,29 @@
+{
+  "Action": {
+    "Name": "GetFileNameWithoutExtension",
+    "Code": "\nusing System;\nusing System.Dynamic;\n\npublic static class GetFileNameWithoutExtension\n{\n    public static void Process(string FullPath, out dynamic Name, PLang.SafeFileSystem.PLangFileSystem fileSystem)\n    {\n        if (string.IsNullOrEmpty(FullPath))\n        {\n            throw new Exception(\"The full path provided is empty or null.\");\n        }\n\n        var fileInfo = fileSystem.FileInfo.FromFileName(FullPath);\n        var fileNameWithoutExtension = fileSystem.Path.GetFileNameWithoutExtension(fileInfo.Name);\n\n        Name = fileNameWithoutExtension;\n    }\n}\n",
+    "Using": [
+      "System",
+      "System.Dynamic"
+    ],
+    "Parameters": {
+      "FullPath": "string",
+      "Name": "dynamic",
+      "fileSystem": "PLang.SafeFileSystem.PLangFileSystem"
+    },
+    "OutParameterDefinition": {
+      "Name": [
+        {
+          "Name": "Name",
+          "FullTypeName": "System.String"
+        }
+      ]
+    },
+    "GoalToCallOnTrue": null,
+    "GoalToCallOnFalse": null
+  },
+  "Text": "[code] get file name without extension from %FullPath%, write to %Name%",
+  "Reload": false,
+  "LlmQuestion": null,
+  "RunOnBuild": false
+}

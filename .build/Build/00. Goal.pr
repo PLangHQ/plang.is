@@ -1,0 +1,17 @@
+{
+  "GoalName": "BuildHtml",
+  "Comment": null,
+  "GoalSteps": [],
+  "Description": null,
+  "Visibility": 1,
+  "GoalFileName": "Build.goal",
+  "RelativeGoalPath": "\\Build.goal",
+  "RelativeGoalFolderPath": "\\",
+  "RelativePrPath": ".build\\Build\\00. Goal.pr",
+  "RelativePrFolderPath": ".build\\Build",
+  "BuilderVersion": "0.1.0.0",
+  "GoalApiInfo": null,
+  "Injections": [],
+  "Signature": null,
+  "Hash": "3e4feb82e3059e01698d9f221bd79564140310ba3549920607fc8027eba9a96d"
+}

@@ -17,12 +17,3 @@ ModifyCssFiles
 - copy 'style.css' to './output/style.css', overwrite file
 - write out 'css file updated'
 
-GenerateHtmlFiles
-- read content of %FullPath%, write to %instructions%
-- [llm] system: return the text as html
-        user: %instructions%
-        scheme:{html:string}
-- [code] get file name without extension from %FullPath%, write to %Name%        
-- write '<!--header-->
-    %html%
-    <!--footer-->' to %Name%.html

@@ -1,0 +1,29 @@
+{
+  "Action": {
+    "Name": "GetFileNameFromFullPath",
+    "Code": "\nusing System;\nusing System.Dynamic;\n\npublic static class GetFileNameFromFullPath\n{\n    public static void Process(string FullPath, out string Name, PLang.SafeFileSystem.PLangFileSystem fileSystem)\n    {\n        if (string.IsNullOrEmpty(FullPath))\n            throw new Exception(\"The full path provided is empty. Please provide a valid full path.\");\n\n        Name = fileSystem.Path.GetFileName(FullPath);\n    }\n}\n",
+    "Using": [
+      "System",
+      "System.Dynamic"
+    ],
+    "Parameters": {
+      "FullPath": "string",
+      "Name": "string",
+      "fileSystem": "PLang.SafeFileSystem.PLangFileSystem"
+    },
+    "OutParameterDefinition": {
+      "Name": [
+        {
+          "Name": "Name",
+          "FullTypeName": "System.String"
+        }
+      ]
+    },
+    "GoalToCallOnTrue": null,
+    "GoalToCallOnFalse": null
+  },
+  "Text": "[code] get file name from %FullPath%, write to %Name%",
+  "Reload": false,
+  "LlmQuestion": null,
+  "RunOnBuild": false
+}
