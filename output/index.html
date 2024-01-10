@@ -36,7 +36,7 @@
         <div class="alert alert-warning" role="alert">
             <strong>PLang has not been released. 
                 <br>
-                Early December
+                Early January
             </strong>
             <!--
             <strong>PLang is at version 0.1</strong><br>
@@ -66,11 +66,8 @@
                             <code><span class="keyword">Start</span>
 - write out <span class="variable">"Hello PLang world"</span>
                             </code>
-                            Now build using <!--(you must <a href="https://github.com/PLangHQ/plang/blob/main/Documentation/Install.md" target="_blank">install PLang first</a>)-->
-                            <div class="terminal">plang build</div>
-                            After the build is done, your application is ready
-                            and you can run
-                            <div class="terminal">plang run</div>
+                            Now build & run using <!--(you must <a href="https://github.com/PLangHQ/plang/blob/main/Documentation/Install.md" target="_blank">install PLang first</a>)-->
+                            <div class="terminal">plang exec</div>
                         </div>
                     </div>
                 </div>
@@ -187,10 +184,11 @@
                         <code>Start
 - [llm] system: is the user content positive or negative
     user: %userInput%
+    scheme: {sentiment:positive|negative}
     write to %sentiment%
 - insert into comments, text=%userInput%, %sentiment%</code>
                         Now run
-                    <div class="terminal">plang run userInput="This is awesome"</div>
+                    <div class="terminal">plang exec userInput="This is awesome"</div>
                     </p>
                 </div>
             </div>
@@ -206,7 +204,7 @@
                         <code>Start
 - start webserver</code>
                         Now run
-                    <div class="terminal">plang run</div>
+                    <div class="terminal">plang exec</div>
                     </p>
                 </div>
             </div>
@@ -228,7 +226,7 @@
 - write out %json.text%</code>
                     </p>
                     Now run
-                    <div class="terminal">plang run RestTest</div>
+                    <div class="terminal">plang exec RestTest</div>
                 </div>
             </div>
 
@@ -279,9 +277,10 @@
                     <p>The language has built in authentication,
                         so no need to handle passwords and emails anymore when communicating with other Plang services.
 
-                        <code>- get http://api.plang.is/myprofile
-    sign request
-            </code>
+                        <code>- get http://api.plang.is/api/balance
+    write to %balance%
+- write out 'My balance is: %balance%'                            
+                        </code>
                         The end service can validate that the request is coming from you. No need for username and
                         passwords.
                         User management and registration becomes simpler & more private
