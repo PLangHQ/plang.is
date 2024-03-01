@@ -8,12 +8,11 @@ ModifyFiles
 - read content of 'header.html', write to %header%
 - read content of 'footer.html', write to %footer%
 - [code] replace '<!--header-->' with %header% in %html%, write to %html%
-- [code] replace '<!--footer-->' with %footer% in %html%, write to %html%
+- [code] replace '<!--footer-->' with %footer% in %html%, write to %htmlResult%
 - [code] get file name from %FullPath%, write to %Name%
-- write %html% to './output/%Name%'
+- write %htmlResult% to './output/%Name%'
 - write out 'html files updated'
 
 ModifyCssFiles
 - copy 'style.css' to './output/style.css', overwrite file
 - write out 'css file updated'
-

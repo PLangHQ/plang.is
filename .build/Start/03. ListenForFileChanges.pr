@@ -6,26 +6,18 @@
         "Type": "String[]",
         "Name": "fileSearchPatterns",
         "Value": [
-          "*.html"
+          "/content/*.txt"
         ]
       },
       {
         "Type": "String",
         "Name": "goalToCall",
-        "Value": "!ModifyFiles"
-      },
-      {
-        "Type": "String[]",
-        "Name": "excludeFiles",
-        "Value": [
-          "header.html",
-          "footer.html"
-        ]
+        "Value": "!GenerateHtmlFiles"
       }
     ],
     "ReturnValue": null
   },
-  "Text": "listen for file changes on '*.html', exclude 'header.html' and 'footer.html', call !ModifyFiles",
+  "Text": "listen for file changes on '/content/*.txt' call !GenerateHtmlFiles",
   "Reload": false,
   "LlmRequest": {
     "temperature": 0.0,
@@ -64,14 +56,14 @@
         "content": [
           {
             "type": "text",
-            "text": "listen for file changes on '*.html', exclude 'header.html' and 'footer.html', call !ModifyFiles"
+            "text": "listen for file changes on '/content/*.txt' call !GenerateHtmlFiles"
           }
         ]
       }
     ],
     "model": "gpt-4",
     "caching": true,
-    "RawResponse": "{\n  \"FunctionName\": \"ListenToFileChange\",\n  \"Parameters\": [\n    {\n      \"Type\": \"String[]\",\n      \"Name\": \"fileSearchPatterns\",\n      \"Value\": [\n        \"*.html\"\n      ]\n    },\n    {\n      \"Type\": \"String\",\n      \"Name\": \"goalToCall\",\n      \"Value\": \"!ModifyFiles\"\n    },\n    {\n      \"Type\": \"String[]\",\n      \"Name\": \"excludeFiles\",\n      \"Value\": [\n        \"header.html\",\n        \"footer.html\"\n      ]\n    }\n  ]\n}"
+    "RawResponse": "{\n  \"FunctionName\": \"ListenToFileChange\",\n  \"Parameters\": [\n    {\n      \"Type\": \"String[]\",\n      \"Name\": \"fileSearchPatterns\",\n      \"Value\": [\n        \"/content/*.txt\"\n      ]\n    },\n    {\n      \"Type\": \"String\",\n      \"Name\": \"goalToCall\",\n      \"Value\": \"!GenerateHtmlFiles\"\n    }\n  ]\n}"
   },
   "RunOnBuild": false
 }

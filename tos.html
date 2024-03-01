@@ -26,7 +26,9 @@
 <li>
     <h4>Purchase and Usage Limits</h4> 
    Users can purchase vouchers of any amount at any time. 
-   The usage of the voucher will be deducted based on the consumption of the LLM service.
+   The usage of the voucher will be deducted based on the consumption of the LLM service. 
+   <br><br>
+   If request is cancelled/terminated/fails before recieving an answer from the LLM service, the cost of the LLM is deducted from the voucher, as the LLM service starts to run as soon a request is made and continues to run until complete.
 </li>
 <li>
     <h4>Transferability</h4> 
@@ -38,13 +40,14 @@
    The Only data stored is usage data to be able to calculate voucher amount and show usage to user.
    No identifiable data about the User is stored.
    No content is stored that is executed at build time or runtime.
-   Since Plang service uses OpenAI, OpenAI might store and use your data. <a href="https://openai.com/" target="_blank">OpenAI policies</a>
+   Since Plang service uses OpenAI, OpenAI might store and use your data. <a href="https://openai.com/" target="_blank">See OpenAI policies</a>.<br>
+   PLang uses Rapyd as it's payment gateway. Rapyd will store name, location and card information. <a href="https://www.rapyd.net/security-compliance" target="_blank">Rapyd policies</a>
 </li>
 <li>
     <h4>Limitation of Liability</h4> 
    The LLM service is provided "as is" without any guarantees. 
-   The Company cannot be held liable for any issues or damages arising from the use of the service or voucher. 
-   Users cannot sue the Company for any reason related to the service.
+   The Company cannot be held liable for any issues or damages arising from the use of the service, voucher or the plang programming language. 
+   Users cannot sue the Company for any reason related to the service, voucher or the plang programming language.
 </li>
 <li>
     <h4>Termination</h4> 
@@ -62,7 +65,7 @@
 </li>
 <li>
     <h4>Amendments</h4> 
-   The Company may amend these ToS at its discretion. Users will be notified of any changes through the built-in messaging system.
+   The Company may amend these ToS at its discretion. 
     </ol>
 </div>
 <!--footer-->
