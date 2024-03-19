@@ -7,13 +7,13 @@
       "Comment": null,
       "ModuleType": "PLang.Modules.FileModule",
       "Name": "ReadFileContent",
-      "Description": "Read the content of the file located at the provided full path and store the content in the variable 'html'.",
+      "Description": "Read the content of the file located at the given full path and store the content in the variable 'html'.",
       "PrFileName": "01. ReadFileContent.pr",
       "RelativePrPath": ".build\\Start\\ModifyFiles\\01. ReadFileContent.pr",
       "Indent": 0,
       "Execute": true,
       "RunOnce": false,
-      "Generated": "2024-03-01T09:58:36.1138773+00:00",
+      "Generated": "2024-03-19T22:38:49.6636658+01:00",
       "WaitForExecution": true,
       "ErrorHandler": null,
       "RetryHandler": null,
@@ -21,7 +21,7 @@
       "CancellationHandler": null,
       "Custom": {},
       "Number": 0,
-      "LineNumber": 6,
+      "LineNumber": 10,
       "LlmRequest": {
         "temperature": 0.0,
         "top_p": 0.0,
@@ -66,21 +66,21 @@
         ],
         "model": "gpt-4",
         "caching": true,
-        "RawResponse": "{\n  \"StepName\": \"ReadFileContent\",\n  \"StepDescription\": \"Read the content of the file located at the provided full path and store the content in the variable 'html'.\",\n  \"Modules\": [\n    \"PLang.Modules.FileModule\"\n  ],\n  \"WaitForExecution\": true\n}"
+        "RawResponse": "{\n  \"StepName\": \"ReadFileContent\",\n  \"StepDescription\": \"Read the content of the file located at the given full path and store the content in the variable 'html'.\",\n  \"Modules\": [\n    \"PLang.Modules.FileModule\"\n  ],\n  \"WaitForExecution\": true\n}"
       }
     },
     {
       "Text": "read content of 'header.html', write to %header%",
       "Comment": null,
       "ModuleType": "PLang.Modules.FileModule",
-      "Name": "ReadHeaderFile",
+      "Name": "ReadHeaderContent",
       "Description": "Read the content of the file named 'header.html' and store it in the variable %header%",
-      "PrFileName": "02. ReadHeaderFile.pr",
-      "RelativePrPath": ".build\\Start\\ModifyFiles\\02. ReadHeaderFile.pr",
+      "PrFileName": "02. ReadHeaderContent.pr",
+      "RelativePrPath": ".build\\Start\\ModifyFiles\\02. ReadHeaderContent.pr",
       "Indent": 0,
       "Execute": true,
       "RunOnce": false,
-      "Generated": "2024-03-01T09:58:49.8509957+00:00",
+      "Generated": "2024-03-19T22:38:57.6820226+01:00",
       "WaitForExecution": true,
       "ErrorHandler": null,
       "RetryHandler": null,
@@ -88,7 +88,7 @@
       "CancellationHandler": null,
       "Custom": {},
       "Number": 1,
-      "LineNumber": 7,
+      "LineNumber": 11,
       "LlmRequest": {
         "temperature": 0.0,
         "top_p": 0.0,
@@ -133,7 +133,7 @@
         ],
         "model": "gpt-4",
         "caching": true,
-        "RawResponse": "{\n  \"StepName\": \"ReadHeaderFile\",\n  \"StepDescription\": \"Read the content of the file named 'header.html' and store it in the variable %header%\",\n  \"Modules\": [\n    \"PLang.Modules.FileModule\"\n  ],\n  \"WaitForExecution\": true\n}"
+        "RawResponse": "{\n  \"StepName\": \"ReadHeaderContent\",\n  \"StepDescription\": \"Read the content of the file named 'header.html' and store it in the variable %header%\",\n  \"Modules\": [\n    \"PLang.Modules.FileModule\"\n  ],\n  \"WaitForExecution\": true\n}"
       }
     },
     {
@@ -147,7 +147,7 @@
       "Indent": 0,
       "Execute": true,
       "RunOnce": false,
-      "Generated": "2024-03-01T09:59:05.0656459+00:00",
+      "Generated": "2024-03-19T22:39:06.5027809+01:00",
       "WaitForExecution": true,
       "ErrorHandler": null,
       "RetryHandler": null,
@@ -155,7 +155,7 @@
       "CancellationHandler": null,
       "Custom": {},
       "Number": 2,
-      "LineNumber": 8,
+      "LineNumber": 12,
       "LlmRequest": {
         "temperature": 0.0,
         "top_p": 0.0,
@@ -204,17 +204,17 @@
       }
     },
     {
-      "Text": "[code] replace '<!--header-->' with %header% in %html%, write to %html%",
+      "Text": "[code] replace '<!--header-->' with %header% in %html%, write to %htmlOut%",
       "Comment": null,
       "ModuleType": "PLang.Modules.CodeModule",
       "Name": "ReplaceHeaderInHtml",
-      "Description": "Replace the placeholder '<!--header-->' with the content of the variable %header% in the HTML file specified by %html%, and then write the result back to the same HTML file.",
+      "Description": "Replace the placeholder '<!--header-->' with the content of the variable %header% in the HTML file specified by %html%, and write the result to the file specified by %htmlOut%",
       "PrFileName": "04. ReplaceHeaderInHtml.pr",
       "RelativePrPath": ".build\\Start\\ModifyFiles\\04. ReplaceHeaderInHtml.pr",
       "Indent": 0,
       "Execute": true,
       "RunOnce": false,
-      "Generated": "2024-03-01T09:59:17.6286555+00:00",
+      "Generated": "2024-03-19T22:40:15.8003899+01:00",
       "WaitForExecution": true,
       "ErrorHandler": null,
       "RetryHandler": null,
@@ -222,7 +222,7 @@
       "CancellationHandler": null,
       "Custom": {},
       "Number": 3,
-      "LineNumber": 9,
+      "LineNumber": 13,
       "LlmRequest": {
         "temperature": 0.0,
         "top_p": 0.0,
@@ -260,28 +260,28 @@
             "content": [
               {
                 "type": "text",
-                "text": "[code] replace '<!--header-->' with %header% in %html%, write to %html%"
+                "text": "[code] replace '<!--header-->' with %header% in %html%, write to %htmlOut%"
               }
             ]
           }
         ],
         "model": "gpt-4",
         "caching": true,
-        "RawResponse": "{\n  \"StepName\": \"ReplaceHeaderInHtml\",\n  \"StepDescription\": \"Replace the placeholder '<!--header-->' with the content of the variable %header% in the HTML file specified by %html%, and then write the result back to the same HTML file.\",\n  \"Modules\": [\n    \"PLang.Modules.CodeModule\"\n  ],\n  \"WaitForExecution\": true\n}"
+        "RawResponse": "{\n  \"StepName\": \"ReplaceHeaderInHtml\",\n  \"StepDescription\": \"Replace the placeholder '<!--header-->' with the content of the variable %header% in the HTML file specified by %html%, and write the result to the file specified by %htmlOut%\",\n  \"Modules\": [\n    \"PLang.Modules.CodeModule\"\n  ],\n  \"WaitForExecution\": true\n}"
       }
     },
     {
-      "Text": "[code] replace '<!--footer-->' with %footer% in %html%, write to %htmlResult%",
+      "Text": "[code] replace '<!--footer-->' with %footer% in %htmlOut%, write to %htmlResult%",
       "Comment": null,
       "ModuleType": "PLang.Modules.CodeModule",
-      "Name": "ReplaceFooterInHtml",
-      "Description": "Replace the placeholder '<!--footer-->' with the content of the variable %footer% in the HTML code stored in the variable %html%, and write the result to the variable %htmlResult%",
-      "PrFileName": "05. ReplaceFooterInHtml.pr",
-      "RelativePrPath": ".build\\Start\\ModifyFiles\\05. ReplaceFooterInHtml.pr",
+      "Name": "ReplaceFooterInHTML",
+      "Description": "Replace the placeholder '<!--footer-->' with the content of the variable %footer% in the HTML code stored in the variable %htmlOut%. The result should be written to the variable %htmlResult%.",
+      "PrFileName": "05. ReplaceFooterInHTML.pr",
+      "RelativePrPath": ".build\\Start\\ModifyFiles\\05. ReplaceFooterInHTML.pr",
       "Indent": 0,
       "Execute": true,
       "RunOnce": false,
-      "Generated": "2024-03-01T10:41:21.804417+00:00",
+      "Generated": "2024-03-19T22:40:28.0294295+01:00",
       "WaitForExecution": true,
       "ErrorHandler": null,
       "RetryHandler": null,
@@ -289,7 +289,7 @@
       "CancellationHandler": null,
       "Custom": {},
       "Number": 4,
-      "LineNumber": 10,
+      "LineNumber": 14,
       "LlmRequest": {
         "temperature": 0.0,
         "top_p": 0.0,
@@ -327,14 +327,14 @@
             "content": [
               {
                 "type": "text",
-                "text": "[code] replace '<!--footer-->' with %footer% in %html%, write to %htmlResult%"
+                "text": "[code] replace '<!--footer-->' with %footer% in %htmlOut%, write to %htmlResult%"
               }
             ]
           }
         ],
         "model": "gpt-4",
         "caching": true,
-        "RawResponse": "{\n  \"StepName\": \"ReplaceFooterInHtml\",\n  \"StepDescription\": \"Replace the placeholder '<!--footer-->' with the content of the variable %footer% in the HTML code stored in the variable %html%, and write the result to the variable %htmlResult%\",\n  \"Modules\": [\n    \"PLang.Modules.CodeModule\"\n  ],\n  \"WaitForExecution\": true\n}"
+        "RawResponse": "{\n  \"StepName\": \"ReplaceFooterInHTML\",\n  \"StepDescription\": \"Replace the placeholder '<!--footer-->' with the content of the variable %footer% in the HTML code stored in the variable %htmlOut%. The result should be written to the variable %htmlResult%.\",\n  \"Modules\": [\n    \"PLang.Modules.CodeModule\"\n  ],\n  \"WaitForExecution\": true\n}"
       }
     },
     {
@@ -348,7 +348,7 @@
       "Indent": 0,
       "Execute": true,
       "RunOnce": false,
-      "Generated": "2024-03-01T10:41:37.7578666+00:00",
+      "Generated": "2024-03-19T22:40:45.1927452+01:00",
       "WaitForExecution": true,
       "ErrorHandler": null,
       "RetryHandler": null,
@@ -356,7 +356,7 @@
       "CancellationHandler": null,
       "Custom": {},
       "Number": 5,
-      "LineNumber": 11,
+      "LineNumber": 15,
       "LlmRequest": {
         "temperature": 0.0,
         "top_p": 0.0,
@@ -409,13 +409,13 @@
       "Comment": null,
       "ModuleType": "PLang.Modules.FileModule",
       "Name": "WriteHtmlToFile",
-      "Description": "Write the content of the variable 'htmlResult' to a file in the './output/' directory. The file name should be the value of the 'Name' variable.",
+      "Description": "Write the content of the variable 'htmlResult' to a file in the './output/' directory. The file name is determined by the 'Name' variable.",
       "PrFileName": "07. WriteHtmlToFile.pr",
       "RelativePrPath": ".build\\Start\\ModifyFiles\\07. WriteHtmlToFile.pr",
       "Indent": 0,
       "Execute": true,
       "RunOnce": false,
-      "Generated": "2024-03-01T10:41:49.9451007+00:00",
+      "Generated": "2024-03-19T22:40:53.3081595+01:00",
       "WaitForExecution": true,
       "ErrorHandler": null,
       "RetryHandler": null,
@@ -423,7 +423,7 @@
       "CancellationHandler": null,
       "Custom": {},
       "Number": 6,
-      "LineNumber": 12,
+      "LineNumber": 16,
       "LlmRequest": {
         "temperature": 0.0,
         "top_p": 0.0,
@@ -468,7 +468,7 @@
         ],
         "model": "gpt-4",
         "caching": true,
-        "RawResponse": "{\n  \"StepName\": \"WriteHtmlToFile\",\n  \"StepDescription\": \"Write the content of the variable 'htmlResult' to a file in the './output/' directory. The file name should be the value of the 'Name' variable.\",\n  \"Modules\": [\n    \"PLang.Modules.FileModule\"\n  ],\n  \"WaitForExecution\": true\n}"
+        "RawResponse": "{\n  \"StepName\": \"WriteHtmlToFile\",\n  \"StepDescription\": \"Write the content of the variable 'htmlResult' to a file in the './output/' directory. The file name is determined by the 'Name' variable.\",\n  \"Modules\": [\n    \"PLang.Modules.FileModule\"\n  ],\n  \"WaitForExecution\": true\n}"
       }
     },
     {
@@ -482,7 +482,7 @@
       "Indent": 0,
       "Execute": true,
       "RunOnce": false,
-      "Generated": "2024-03-01T10:42:02.4503547+00:00",
+      "Generated": "2024-03-19T22:41:00.7038712+01:00",
       "WaitForExecution": true,
       "ErrorHandler": null,
       "RetryHandler": null,
@@ -490,7 +490,7 @@
       "CancellationHandler": null,
       "Custom": {},
       "Number": 7,
-      "LineNumber": 13,
+      "LineNumber": 17,
       "LlmRequest": {
         "temperature": 0.0,
         "top_p": 0.0,
@@ -550,5 +550,5 @@
   "GoalApiInfo": null,
   "Injections": [],
   "Signature": null,
-  "Hash": "a9eef1c056abac5077cebde8294b10aa2c29acf1770bd517266053ffe611908a"
+  "Hash": "cac281388c79dfcf9eb590f710a41418cac37ca14e438d4152245bf1b6e55066"
 }

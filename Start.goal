@@ -2,13 +2,16 @@ Start
 - listen for file changes on '*.html', exclude 'header.html' and 'footer.html', call !ModifyFiles
 - listen for file changes on 'style.css', call !ModifyCssFiles
 - listen for file changes on '/content/*.txt' call !GenerateHtmlFiles
+- get path to all '*.html' files, write to %filePaths%
+- foreach %filePaths%, call !ModifyFiles item=%FullPath%
+
 
 ModifyFiles
 - read content of %FullPath%, write to %html%
 - read content of 'header.html', write to %header%
 - read content of 'footer.html', write to %footer%
-- [code] replace '<!--header-->' with %header% in %html%, write to %html%
-- [code] replace '<!--footer-->' with %footer% in %html%, write to %htmlResult%
+- [code] replace '<!--header-->' with %header% in %html%, write to %htmlOut%
+- [code] replace '<!--footer-->' with %footer% in %htmlOut%, write to %htmlResult%
 - [code] get file name from %FullPath%, write to %Name%
 - write %htmlResult% to './output/%Name%'
 - write out 'html files updated'
@@ -16,3 +19,6 @@ ModifyFiles
 ModifyCssFiles
 - copy 'style.css' to './output/style.css', overwrite file
 - write out 'css file updated'
+
+GenerateFiles
+- call !ModifyFiles 
