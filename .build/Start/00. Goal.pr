@@ -13,7 +13,7 @@
       "Indent": 0,
       "Execute": true,
       "RunOnce": false,
-      "Generated": "2024-03-19T22:38:25.3358523+01:00",
+      "Generated": "2024-03-22T17:48:02.7683646+01:00",
       "WaitForExecution": true,
       "ErrorHandler": null,
       "RetryHandler": null,
@@ -66,7 +66,7 @@
         ],
         "model": "gpt-4",
         "caching": true,
-        "RawResponse": "{\n  \"StepName\": \"ListenForFileChanges\",\n  \"StepDescription\": \"Monitor for any changes in files with the extension '.html', excluding 'header.html' and 'footer.html'. When a change is detected, call the function 'ModifyFiles'.\",\n  \"Modules\": [\n    \"PLang.Modules.FileModule\"\n  ],\n  \"WaitForExecution\": true\n}"
+        "RawResponse": null
       }
     },
     {
@@ -80,7 +80,7 @@
       "Indent": 0,
       "Execute": true,
       "RunOnce": false,
-      "Generated": "2024-03-19T22:38:31.2009995+01:00",
+      "Generated": "2024-03-22T17:48:07.3882735+01:00",
       "WaitForExecution": true,
       "ErrorHandler": null,
       "RetryHandler": null,
@@ -133,7 +133,7 @@
         ],
         "model": "gpt-4",
         "caching": true,
-        "RawResponse": "{\n  \"StepName\": \"ListenFileChanges\",\n  \"StepDescription\": \"Monitor the file 'style.css' for any changes. If any changes are detected, call the function 'ModifyCssFiles'.\",\n  \"Modules\": [\n    \"PLang.Modules.FileModule\"\n  ],\n  \"WaitForExecution\": true\n}"
+        "RawResponse": null
       }
     },
     {
@@ -147,7 +147,7 @@
       "Indent": 0,
       "Execute": true,
       "RunOnce": false,
-      "Generated": "2024-03-19T22:38:39.5202802+01:00",
+      "Generated": "2024-03-22T17:48:12.1150142+01:00",
       "WaitForExecution": true,
       "ErrorHandler": {
         "IgnoreErrors": false,
@@ -209,7 +209,7 @@
         ],
         "model": "gpt-4",
         "caching": true,
-        "RawResponse": "{\n  \"StepName\": \"ListenForFileChanges\",\n  \"StepDescription\": \"Monitor the '/content/*.txt' directory for any changes in .txt files. If any changes are detected, call the function 'GenerateHtmlFiles'.\",\n  \"Modules\": [\n    \"PLang.Modules.FileModule\"\n  ],\n  \"WaitForExecution\": true,\n  \"ErrorHandler\": {\n    \"IgnoreErrors\": false,\n    \"OnExceptionContainingTextCallGoal\": {\n      \"File access error\": \"!HandleFileAccessError\"\n    }\n  },\n  \"RetryHandler\": {\n    \"RetryCount\": 3,\n    \"RetryDelayInMilliseconds\": 50\n  }\n}"
+        "RawResponse": null
       }
     },
     {
@@ -354,9 +354,9 @@
   "RelativeGoalFolderPath": "\\",
   "RelativePrPath": ".build\\Start\\00. Goal.pr",
   "RelativePrFolderPath": ".build\\Start",
-  "BuilderVersion": "0.1.0.0",
+  "BuilderVersion": "0.1.0.1",
   "GoalApiInfo": null,
   "Injections": [],
   "Signature": null,
-  "Hash": "62cc4f64fce551ed4b8b6b4033a62e36535ed03cbd56b88e70149ea669e1b9c7"
+  "Hash": "2f94e569e91da3c60424b8fb280241f3a36c937c075fdd2cd64773d2b773e819"
 }

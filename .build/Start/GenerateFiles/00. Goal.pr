@@ -77,9 +77,9 @@
   "RelativeGoalFolderPath": "\\",
   "RelativePrPath": ".build\\Start\\GenerateFiles\\00. Goal.pr",
   "RelativePrFolderPath": ".build\\Start\\GenerateFiles",
-  "BuilderVersion": "0.1.0.0",
+  "BuilderVersion": "0.1.0.1",
   "GoalApiInfo": null,
   "Injections": [],
   "Signature": null,
-  "Hash": "e203245ee3aea139ffa8e1680093d471aea3ad8683674f93c07b432ac011cfb8"
+  "Hash": "ce045233a2ef889ffc77217add684959bc7079f87ce9614009bd53eaf548d0b6"
 }

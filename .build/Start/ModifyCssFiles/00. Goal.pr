@@ -144,9 +144,9 @@
   "RelativeGoalFolderPath": "\\",
   "RelativePrPath": ".build\\Start\\ModifyCssFiles\\00. Goal.pr",
   "RelativePrFolderPath": ".build\\Start\\ModifyCssFiles",
-  "BuilderVersion": "0.1.0.0",
+  "BuilderVersion": "0.1.0.1",
   "GoalApiInfo": null,
   "Injections": [],
   "Signature": null,
-  "Hash": "ecab908b78f0f04866276d359f1ce187e123940b4bf5160f36ef3be3cf4ad338"
+  "Hash": "23b9240a5f0abfc046ce5438c05b36318c00557a8c9a66c8de9f5a5b12158050"
 }

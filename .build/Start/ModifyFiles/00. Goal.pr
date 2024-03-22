@@ -546,9 +546,9 @@
   "RelativeGoalFolderPath": "\\",
   "RelativePrPath": ".build\\Start\\ModifyFiles\\00. Goal.pr",
   "RelativePrFolderPath": ".build\\Start\\ModifyFiles",
-  "BuilderVersion": "0.1.0.0",
+  "BuilderVersion": "0.1.0.1",
   "GoalApiInfo": null,
   "Injections": [],
   "Signature": null,
-  "Hash": "cac281388c79dfcf9eb590f710a41418cac37ca14e438d4152245bf1b6e55066"
+  "Hash": "a65cbe7fd1e2177957199e842046e759e8afc46730168ee81042bccc435114a1"
 }
