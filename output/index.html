@@ -171,7 +171,7 @@
                     <br /><br />
                     <em>Create Setup.goal file in your directory, this is the content</em>
                     <code>Setup
-    - create table comments, columns text(not null), sentiment(not null), created(datetime, default now)</code>
+- create table comments, columns text(not null), sentiment(not null), created(datetime, default now)</code>
                 </p>
             </div>
         </div>
@@ -187,11 +187,11 @@
                     you
                     can work with
                     <code>Start
-    - [llm] system: is the user content positive or negative
+- [llm] system: is the user content positive or negative
     user: %userInput%
     scheme: {sentiment:positive|negative}
     write to %sentiment%
-    - insert into comments, text=%userInput%, %sentiment%</code>
+- insert into comments, text=%userInput%, %sentiment%</code>
                     Now run
                 <div class="terminal">plang exec userInput="This is awesome"</div>
                 </p>
@@ -207,7 +207,7 @@
                 <h3>Webserver</h3>
                 <p>Start your webserver in one line
                     <code>Start
-    - start webserver</code>
+- start webserver</code>
                     Now run
                 <div class="terminal">plang exec</div>
                 </p>
@@ -226,9 +226,9 @@
                 <p>Want to talk with a REST api, easy, it does everything for you.
                     <em>Create RestTest.goal in your folder</em>
                     <code>RestTest
-    - get http://https://cat-fact.herokuapp.com/facts
+- get http://https://cat-fact.herokuapp.com/facts
     write to %json%
-    - write out %json.text%</code>
+- write out %json.text%</code>
                 </p>
                 Now run
                 <div class="terminal">plang exec RestTest</div>
@@ -245,7 +245,7 @@
                 <p>You can send message between users in a simple way. All encrypted (AES256)
 
                     <code>Start
-    - send message to %publicKey%
+- send message to %publicKey%
     content: Hey, how are you doing today, have your tried PLang?
     </code>
                 
@@ -262,10 +262,10 @@
                 <h3>Built-in scraper</h3>
                 <p>Scrape your favorite website, store it for later.
                     <code>Start
-    - go to https://example.org/
-    - click, "More information..." link
-    - extract .help-article into %helpContent%
-    - write out %helpContent%</code>
+- go to https://example.org/
+- click, "More information..." link
+- extract .help-article into %helpContent%
+- write out %helpContent%</code>
                 </p>
 
             </div>
@@ -284,7 +284,7 @@
 
                     <code>- get http://api.plang.is/api/balance
     write to %balance%
-    - write out 'My balance is: %balance%'                            
+- write out 'My balance is: %balance%'                            
                     </code>
                     The end service can validate that the request is coming from you. No need for username and
                     passwords.
@@ -302,7 +302,7 @@
                 <p>Describe the layout you want
 
                     <code>- center content, horizontal and vertical
-    - create login form, 
+- create login form, 
     #username, #password, 
     TOS (https://plang.is/tos.html)
     submit to !Login
@@ -321,8 +321,8 @@
                 <em>You can add your own events into any Goal or Step</em>
             </div>
             <code>- before each goal, call !LogGoal
-    - before step nr 2 in !Process.Image, call !Preprocess.Image
-    - on error on !Fetch.Data, call !Report.SysAdmin
+- before step nr 2 in !Process.Image, call !Preprocess.Image
+- on error on !Fetch.Data, call !Report.SysAdmin
             </code>
             </p>
         </div>
