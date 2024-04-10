@@ -7,16 +7,23 @@
       "Comment": null,
       "ModuleType": "PLang.Modules.FileModule",
       "Name": "ListenForFileChanges",
-      "Description": "Monitor for any changes in files with the extension '.html', excluding 'header.html' and 'footer.html'. When a change is detected, call the function 'ModifyFiles'.",
+      "Description": "Monitor changes to any '*.html' files in the directory, excluding 'header.html' and 'footer.html', and trigger the 'ModifyFiles' function when changes are detected.",
       "PrFileName": "01. ListenForFileChanges.pr",
       "RelativePrPath": ".build\\Start\\01. ListenForFileChanges.pr",
       "Indent": 0,
       "Execute": true,
       "RunOnce": false,
-      "Generated": "2024-03-22T17:48:02.7683646+01:00",
+      "Generated": "2024-04-10T11:15:43.3930402+00:00",
       "WaitForExecution": true,
-      "ErrorHandler": null,
-      "RetryHandler": null,
+      "ErrorHandler": {
+        "IgnoreErrors": false,
+        "OnExceptionContainingTextCallGoal": null,
+        "ContinueToNextStep": true
+      },
+      "RetryHandler": {
+        "RetryCount": 3,
+        "RetryDelayInMilliseconds": 100
+      },
       "CacheHandler": null,
       "CancellationHandler": null,
       "Custom": {},
@@ -37,7 +44,7 @@
             "content": [
               {
                 "type": "text",
-                "text": "You are provided with a statement from the user. \r\nThis statement is a step in a Function. \r\n\r\nYou MUST determine which module can be used to solve the statement.\r\nYou MUST choose from available modules provided by the assistant to determine which module. If you cannot choose module, set N/A\r\n\r\nvariable is defined with starting and ending %, e.g. %filePath%\r\n! defines a call to a function\r\n\r\nModules: Name of module. Suggest 1-3 modules that could be used to solve the step.\r\nStepName: Short name for step\r\nStepDescription: Rewrite the step as you understand it, make it detailed\r\nWaitForExecution: Indicates if code should wait for execution to finish, default is true\r\nErrorHandler: How to handle errors, default is null. if error should be handled but text (OnExceptionContainingTextCallGoal) is not defined, then use * for key\r\nRetryHandler: How to retry the step if there is error, default is null\r\nCachingHandler: How caching is handled, default is null\r\nRead the description of each module, then determine which module to use.\r\nMake sure to return valid JSON, escape double quote if needed\r\n\r\nBe Concise\r\n"
+                "text": "You are provided with a statement from the user. \r\nThis statement is a step in a Function. \r\n\r\nYou MUST determine which module can be used to solve the statement.\r\nYou MUST choose from available modules provided by the assistant to determine which module. If you cannot choose module, set N/A\r\n\r\nvariable is defined with starting and ending %, e.g. %filePath%\r\n! defines a call to a function\r\n\r\nModules: Name of module. Suggest 1-3 modules that could be used to solve the step.\r\nStepName: Short name for step\r\nStepDescription: Rewrite the step as you understand it, make it detailed\r\nWaitForExecution: Indicates if code should wait for execution to finish, default is true\r\nErrorHandler: How to handle errors defined by user, default is null. if error should be handled but text (OnExceptionContainingTextCallGoal) is not defined, then use * for key\r\nRetryHandler: How to retry the step if there is error, default is null\r\nCachingHandler: How caching is handled, default is null\r\nRead the description of each module, then determine which module to use.\r\nMake sure to return valid JSON, escape double quote if needed\r\n\r\nBe Concise\r\n"
               },
               {
                 "type": "text",
@@ -64,25 +71,29 @@
             ]
           }
         ],
-        "model": "gpt-4",
+        "model": "gpt-4-turbo",
         "caching": true,
-        "RawResponse": null
+        "RawResponse": "{\n\"StepName\": \"ListenForFileChanges\",\n\"StepDescription\": \"Monitor changes to any '*.html' files in the directory, excluding 'header.html' and 'footer.html', and trigger the 'ModifyFiles' function when changes are detected.\",\n\"Modules\": [\"PLang.Modules.FileModule\"],\n\"WaitForExecution\": true,\n\"ErrorHandler\": {\n  \"IgnoreErrors\": false,\n  \"ContinueToNextStep\": true\n},\n\"RetryHandler\": {\n  \"RetryCount\": 3,\n  \"RetryDelayInMilliseconds\": 100\n}\n}"
       }
     },
     {
       "Text": "listen for file changes on 'style.css', call !ModifyCssFiles",
       "Comment": null,
       "ModuleType": "PLang.Modules.FileModule",
-      "Name": "ListenFileChanges",
-      "Description": "Monitor the file 'style.css' for any changes. If any changes are detected, call the function 'ModifyCssFiles'.",
-      "PrFileName": "02. ListenFileChanges.pr",
-      "RelativePrPath": ".build\\Start\\02. ListenFileChanges.pr",
+      "Name": "ListenForFileChanges",
+      "Description": "Monitor the file 'style.css' for any changes and execute the function ModifyCssFiles when a change is detected.",
+      "PrFileName": "02. ListenForFileChanges.pr",
+      "RelativePrPath": ".build\\Start\\02. ListenForFileChanges.pr",
       "Indent": 0,
       "Execute": true,
       "RunOnce": false,
-      "Generated": "2024-03-22T17:48:07.3882735+01:00",
+      "Generated": "2024-04-10T11:09:40.2823922+00:00",
       "WaitForExecution": true,
-      "ErrorHandler": null,
+      "ErrorHandler": {
+        "IgnoreErrors": false,
+        "OnExceptionContainingTextCallGoal": null,
+        "ContinueToNextStep": true
+      },
       "RetryHandler": null,
       "CacheHandler": null,
       "CancellationHandler": null,
@@ -131,35 +142,30 @@
             ]
           }
         ],
-        "model": "gpt-4",
+        "model": "gpt-4-turbo",
         "caching": true,
-        "RawResponse": null
+        "RawResponse": "{\n  \"StepName\": \"ListenForFileChanges\",\n  \"StepDescription\": \"Monitor the file 'style.css' for any changes and execute the function ModifyCssFiles when a change is detected.\",\n  \"Modules\": [\"PLang.Modules.FileModule\"],\n  \"WaitForExecution\": true,\n  \"ErrorHandler\": {\n    \"IgnoreErrors\": false,\n    \"ContinueToNextStep\": true\n  }\n}"
       }
     },
     {
       "Text": "listen for file changes on '/content/*.txt' call !GenerateHtmlFiles",
       "Comment": null,
       "ModuleType": "PLang.Modules.FileModule",
-      "Name": "ListenForFileChanges",
-      "Description": "Monitor the '/content/*.txt' directory for any changes in .txt files. If any changes are detected, call the function 'GenerateHtmlFiles'.",
-      "PrFileName": "03. ListenForFileChanges.pr",
-      "RelativePrPath": ".build\\Start\\03. ListenForFileChanges.pr",
+      "Name": "ListenFileChanges",
+      "Description": "Monitor changes in text files located in the '/content/' directory and trigger the GenerateHtmlFiles function when changes occur.",
+      "PrFileName": "03. ListenFileChanges.pr",
+      "RelativePrPath": ".build\\Start\\03. ListenFileChanges.pr",
       "Indent": 0,
       "Execute": true,
       "RunOnce": false,
-      "Generated": "2024-03-22T17:48:12.1150142+01:00",
+      "Generated": "2024-04-10T11:10:01.3557892+00:00",
       "WaitForExecution": true,
       "ErrorHandler": {
         "IgnoreErrors": false,
-        "OnExceptionContainingTextCallGoal": {
-          "File access error": "!HandleFileAccessError"
-        },
-        "ContinueToNextStep": false
+        "OnExceptionContainingTextCallGoal": null,
+        "ContinueToNextStep": true
       },
-      "RetryHandler": {
-        "RetryCount": 3,
-        "RetryDelayInMilliseconds": 50
-      },
+      "RetryHandler": null,
       "CacheHandler": null,
       "CancellationHandler": null,
       "Custom": {},
@@ -207,9 +213,9 @@
             ]
           }
         ],
-        "model": "gpt-4",
+        "model": "gpt-4-turbo",
         "caching": true,
-        "RawResponse": null
+        "RawResponse": "{\n\"StepName\": \"ListenFileChanges\",\n\"StepDescription\": \"Monitor changes in text files located in the '/content/' directory and trigger the GenerateHtmlFiles function when changes occur.\",\n\"Modules\": [\"PLang.Modules.FileModule\"],\n\"WaitForExecution\": true,\n\"ErrorHandler\": {\n  \"IgnoreErrors\": false,\n  \"ContinueToNextStep\": true\n}\n}"
       }
     },
     {
@@ -223,7 +229,7 @@
       "Indent": 0,
       "Execute": true,
       "RunOnce": false,
-      "Generated": "2024-03-19T22:43:34.5167031+01:00",
+      "Generated": "2024-03-19T21:43:34.5167031+00:00",
       "WaitForExecution": true,
       "ErrorHandler": null,
       "RetryHandler": null,
@@ -290,7 +296,7 @@
       "Indent": 0,
       "Execute": true,
       "RunOnce": false,
-      "Generated": "2024-03-19T22:43:42.2464392+01:00",
+      "Generated": "2024-03-19T21:43:42.2464392+00:00",
       "WaitForExecution": true,
       "ErrorHandler": null,
       "RetryHandler": null,
@@ -354,9 +360,9 @@
   "RelativeGoalFolderPath": "\\",
   "RelativePrPath": ".build\\Start\\00. Goal.pr",
   "RelativePrFolderPath": ".build\\Start",
-  "BuilderVersion": "0.1.0.1",
+  "BuilderVersion": "0.1.0.4",
   "GoalApiInfo": null,
   "Injections": [],
   "Signature": null,
-  "Hash": "2f94e569e91da3c60424b8fb280241f3a36c937c075fdd2cd64773d2b773e819"
+  "Hash": "f8be551fa34c0d1f9cbad7b19f5939cd7302cf2a51e9b142bd813efab8f748c1"
 }

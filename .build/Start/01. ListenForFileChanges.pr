@@ -23,62 +23,62 @@
         ]
       },
       {
-        "Type": "Boolean?",
+        "Type": "Boolean",
         "Name": "includeSubdirectories",
         "Value": false
       },
       {
-        "Type": "Int64?",
+        "Type": "Int64",
         "Name": "debounceTime",
         "Value": 150
       },
       {
-        "Type": "Boolean?",
+        "Type": "Boolean",
         "Name": "listenForFileChange",
         "Value": true
       },
       {
-        "Type": "Boolean?",
+        "Type": "Boolean",
         "Name": "listenForFileCreated",
         "Value": false
       },
       {
-        "Type": "Boolean?",
+        "Type": "Boolean",
         "Name": "listenForFileDeleted",
         "Value": false
       },
       {
-        "Type": "Boolean?",
+        "Type": "Boolean",
         "Name": "listenForFileRename",
         "Value": false
       },
       {
-        "Type": "String?",
+        "Type": "String",
         "Name": "absoluteFilePathVariableName",
         "Value": "FullPath"
       },
       {
-        "Type": "String?",
+        "Type": "String",
         "Name": "fileNameVariableName",
         "Value": "Name"
       },
       {
-        "Type": "String?",
+        "Type": "String",
         "Name": "changeTypeVariableName",
         "Value": "ChangeType"
       },
       {
-        "Type": "String?",
+        "Type": "String",
         "Name": "senderVariableName",
         "Value": "Sender"
       },
       {
-        "Type": "String?",
+        "Type": "String",
         "Name": "oldFileAbsoluteFilePathVariableName",
         "Value": "OldFullPath"
       },
       {
-        "Type": "String?",
+        "Type": "String",
         "Name": "oldFileNameVariableName",
         "Value": "OldName"
       }
@@ -129,9 +129,9 @@
         ]
       }
     ],
-    "model": "gpt-4",
+    "model": "gpt-4-turbo",
     "caching": true,
-    "RawResponse": "{\n  \"FunctionName\": \"ListenToFileChange\",\n  \"Parameters\": [\n    {\n      \"Type\": \"String[]\",\n      \"Name\": \"fileSearchPatterns\",\n      \"Value\": [\n        \"*.html\"\n      ]\n    },\n    {\n      \"Type\": \"String\",\n      \"Name\": \"goalToCall\",\n      \"Value\": \"!ModifyFiles\"\n    },\n    {\n      \"Type\": \"String[]\",\n      \"Name\": \"excludeFiles\",\n      \"Value\": [\n        \"header.html\",\n        \"footer.html\"\n      ]\n    },\n    {\n      \"Type\": \"Boolean?\",\n      \"Name\": \"includeSubdirectories\",\n      \"Value\": false\n    },\n    {\n      \"Type\": \"Int64?\",\n      \"Name\": \"debounceTime\",\n      \"Value\": 150\n    },\n    {\n      \"Type\": \"Boolean?\",\n      \"Name\": \"listenForFileChange\",\n      \"Value\": true\n    },\n    {\n      \"Type\": \"Boolean?\",\n      \"Name\": \"listenForFileCreated\",\n      \"Value\": false\n    },\n    {\n      \"Type\": \"Boolean?\",\n      \"Name\": \"listenForFileDeleted\",\n      \"Value\": false\n    },\n    {\n      \"Type\": \"Boolean?\",\n      \"Name\": \"listenForFileRename\",\n      \"Value\": false\n    },\n    {\n      \"Type\": \"String?\",\n      \"Name\": \"absoluteFilePathVariableName\",\n      \"Value\": \"FullPath\"\n    },\n    {\n      \"Type\": \"String?\",\n      \"Name\": \"fileNameVariableName\",\n      \"Value\": \"Name\"\n    },\n    {\n      \"Type\": \"String?\",\n      \"Name\": \"changeTypeVariableName\",\n      \"Value\": \"ChangeType\"\n    },\n    {\n      \"Type\": \"String?\",\n      \"Name\": \"senderVariableName\",\n      \"Value\": \"Sender\"\n    },\n    {\n      \"Type\": \"String?\",\n      \"Name\": \"oldFileAbsoluteFilePathVariableName\",\n      \"Value\": \"OldFullPath\"\n    },\n    {\n      \"Type\": \"String?\",\n      \"Name\": \"oldFileNameVariableName\",\n      \"Value\": \"OldName\"\n    }\n  ],\n  \"ReturnValue\": null\n}"
+    "RawResponse": null
   },
   "RunOnBuild": false
 }

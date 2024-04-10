@@ -13,7 +13,7 @@
       "Indent": 0,
       "Execute": true,
       "RunOnce": false,
-      "Generated": "2024-03-19T22:41:07.1463981+01:00",
+      "Generated": "2024-03-19T21:41:07.1463981+00:00",
       "WaitForExecution": true,
       "ErrorHandler": null,
       "RetryHandler": null,
@@ -80,7 +80,7 @@
       "Indent": 0,
       "Execute": true,
       "RunOnce": false,
-      "Generated": "2024-03-19T22:41:14.4665316+01:00",
+      "Generated": "2024-03-19T21:41:14.4665316+00:00",
       "WaitForExecution": true,
       "ErrorHandler": null,
       "RetryHandler": null,
@@ -144,9 +144,9 @@
   "RelativeGoalFolderPath": "\\",
   "RelativePrPath": ".build\\Start\\ModifyCssFiles\\00. Goal.pr",
   "RelativePrFolderPath": ".build\\Start\\ModifyCssFiles",
-  "BuilderVersion": "0.1.0.1",
+  "BuilderVersion": "0.1.0.4",
   "GoalApiInfo": null,
   "Injections": [],
   "Signature": null,
-  "Hash": "23b9240a5f0abfc046ce5438c05b36318c00557a8c9a66c8de9f5a5b12158050"
+  "Hash": "870caff843231b917fb79247a56629af291d63fd5aa1219dd66cbdc3fa860be8"
 }
