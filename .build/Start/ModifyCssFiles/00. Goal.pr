@@ -1,6 +1,7 @@
 {
   "GoalName": "ModifyCssFiles",
   "Comment": null,
+  "Text": "ModifyCssFiles",
   "GoalSteps": [
     {
       "Text": "copy 'style.css' to './output/style.css', overwrite file",
@@ -144,9 +145,9 @@
   "RelativeGoalFolderPath": "\\",
   "RelativePrPath": ".build\\Start\\ModifyCssFiles\\00. Goal.pr",
   "RelativePrFolderPath": ".build\\Start\\ModifyCssFiles",
-  "BuilderVersion": "0.1.0.4",
-  "GoalApiInfo": null,
+  "BuilderVersion": "0.1.0.10",
+  "GoalInfo": null,
   "Injections": [],
   "Signature": null,
-  "Hash": "870caff843231b917fb79247a56629af291d63fd5aa1219dd66cbdc3fa860be8"
+  "Hash": "e63d27f0ba26a29090d1f6618a809fa638f948de257098c696a619d6a10edfb5"
 }
