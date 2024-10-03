@@ -1,31 +1,21 @@
 {
   "Action": {
-    "FunctionName": "Write",
+    "FunctionName": "RunGoal",
     "Parameters": [
       {
-        "Type": "Object",
-        "Name": "content",
-        "Value": "css file updated"
+        "Type": "GoalToCall",
+        "Name": "goalName",
+        "Value": "!ModifyFiles"
       },
       {
-        "Type": "Boolean",
-        "Name": "writeToBuffer",
-        "Value": false
-      },
-      {
-        "Type": "String",
-        "Name": "type",
-        "Value": "text"
-      },
-      {
-        "Type": "Int32",
-        "Name": "statusCode",
-        "Value": 200
+        "Type": "Dictionary<String, Object>",
+        "Name": "parameters",
+        "Value": null
       }
     ],
     "ReturnValues": null
   },
-  "Text": "write out 'css file updated'",
+  "Text": "call !ModifyFiles",
   "Reload": false,
   "LlmRequest": {
     "temperature": 0.0,
@@ -55,7 +45,11 @@
         "content": [
           {
             "type": "text",
-            "text": "## functions available starts ##\r\nAsk(String text, String? type = \"text\", Int32? statusCode = 200, String? regexPattern, String? errorMessage)  : String  // Send response to user and waits for answer. type can be text|warning|error|info|debug|trace. statusCode(like http status code) should be defined by user. regexPattern should contain start and end character if user input needs to match fully. errorMessage is message to user when answer does not match expected regexPattern, use good grammar and correct formatting.. \nWriteToSystemOutput(Object? content, Boolean? writeToBuffer = False, String? type = \"text\", Int32? statusCode = 200)  : void  // Write to the system output. type can be text|warning|error|info|debug|trace. statusCode(like http status code) should be defined by user. type=error should have statusCode between 400-599, depending on text. \nWriteJson(Object? content, Boolean? writeToBuffer = False, String? type = \"text\", Int32? statusCode = 200)  : void  // Write to the json output. Make sure content is valid JSON format. type can be text|warning|error|info|debug|trace. statusCode(like http status code) should be defined by user. type=error should have statusCode between 400-599, depending on text. \nWrite(Object? content, Boolean? writeToBuffer = False, String? type = \"text\", Int32? statusCode = 200)  : void  // Write to the output. type can be text|warning|error|info|debug|trace. statusCode(like http status code) should be defined by user. type=error should have statusCode between 400-599, depending on text.\r\n## functions available ends ##"
+            "text": "## functions available starts ##\r\nRunGoal(GoalToCall goalName, Dictionary`2<String, Object>? parameters, Boolean? waitForExecution = True, Int32? delayWhenNotWaitingInMilliseconds = 50, UInt32? waitForXMillisecondsBeforeRunningGoal = 0)  : void  // If backward slash(\\) is used by user, change to forward slash(/).\r\n## functions available ends ##"
+          },
+          {
+            "type": "text",
+            "text": "\r\n== Examples starts ==\r\ncall !ParseText => ParseText is goalName, no parameters\r\ncall !Gmail/Search %query%, => Gmail/Search is goalName,  %query% is key and value in parameters\r\ncall Folder/Search q=%fileName% => Folder/Search is goalName, parameter key is q, and value is %fileName%\r\n== Examples ends ==\r\n"
           }
         ]
       },
@@ -64,14 +58,14 @@
         "content": [
           {
             "type": "text",
-            "text": "write out 'css file updated'"
+            "text": "call !ModifyFiles"
           }
         ]
       }
     ],
-    "type": "PLang.Modules.GenericFunctionBuilder",
+    "type": "PLang.Modules.CallGoalModule.Builder",
     "caching": true,
-    "RawResponse": "```json\n{\n\t\"FunctionName\": \"Write\",\n\t\"Parameters\": [{\n\t\t\"Type\": \"Object\",\n\t\t\"Name\": \"content\",\n\t\t\"Value\": \"css file updated\"\n\t}, {\n\t\t\"Type\": \"Boolean\",\n\t\t\"Name\": \"writeToBuffer\",\n\t\t\"Value\": false\n\t}, {\n\t\t\"Type\": \"String\",\n\t\t\"Name\": \"type\",\n\t\t\"Value\": \"text\"\n\t}, {\n\t\t\"Type\": \"Int32\",\n\t\t\"Name\": \"statusCode\",\n\t\t\"Value\": 200\n\t}],\n\t\"ReturnValues\": null\n}\n```"
+    "RawResponse": "```json\n{\n\t\"FunctionName\": \"RunGoal\",\n\t\"Parameters\": [{\n\t\t\t\"Type\": \"GoalToCall\",\n\t\t\t\"Name\": \"goalName\",\n\t\t\t\"Value\": \"!ModifyFiles\"\n\t\t},\n\t\t{\n\t\t\t\"Type\": \"Dictionary<String, Object>\",\n\t\t\t\"Name\": \"parameters\",\n\t\t\t\"Value\": null\n\t\t}\n\t]\n}\n```"
   },
   "RunOnBuild": false
 }

@@ -6,21 +6,13 @@
         "Type": "String[]",
         "Name": "fileSearchPatterns",
         "Value": [
-          "*.html"
+          "/content/*.txt"
         ]
       },
       {
         "Type": "GoalToCall",
         "Name": "goalToCall",
-        "Value": "!ModifyFiles"
-      },
-      {
-        "Type": "String[]",
-        "Name": "excludeFiles",
-        "Value": [
-          "header.html",
-          "footer.html"
-        ]
+        "Value": "!GenerateHtmlFiles"
       },
       {
         "Type": "Boolean",
@@ -30,7 +22,7 @@
     ],
     "ReturnValues": null
   },
-  "Text": "listen for file changes on '*.html', exclude 'header.html' and 'footer.html', call !ModifyFiles",
+  "Text": "listen for file changes on '/content/*.txt' call !GenerateHtmlFiles",
   "Reload": false,
   "LlmRequest": {
     "temperature": 0.0,
@@ -69,14 +61,14 @@
         "content": [
           {
             "type": "text",
-            "text": "listen for file changes on '*.html', exclude 'header.html' and 'footer.html', call !ModifyFiles"
+            "text": "listen for file changes on '/content/*.txt' call !GenerateHtmlFiles"
           }
         ]
       }
     ],
     "type": "PLang.Modules.GenericFunctionBuilder",
     "caching": true,
-    "RawResponse": "```json\n{\n\t\"FunctionName\": \"ListenToFileChange\",\n\t\"Parameters\": [\n\t\t{\n\t\t\t\"Type\": \"String[]\",\n\t\t\t\"Name\": \"fileSearchPatterns\",\n\t\t\t\"Value\": [\"*.html\"]\n\t\t},\n\t\t{\n\t\t\t\"Type\": \"GoalToCall\",\n\t\t\t\"Name\": \"goalToCall\",\n\t\t\t\"Value\": \"!ModifyFiles\"\n\t\t},\n\t\t{\n\t\t\t\"Type\": \"String[]\",\n\t\t\t\"Name\": \"excludeFiles\",\n\t\t\t\"Value\": [\"header.html\", \"footer.html\"]\n\t\t},\n\t\t{\n\t\t\t\"Type\": \"Boolean\",\n\t\t\t\"Name\": \"listenForFileChange\",\n\t\t\t\"Value\": true\n\t\t}\n\t]\n}\n```"
+    "RawResponse": "```json\n{\n\t\"FunctionName\": \"ListenToFileChange\",\n\t\"Parameters\": [\n\t\t{\n\t\t\t\"Type\": \"String[]\",\n\t\t\t\"Name\": \"fileSearchPatterns\",\n\t\t\t\"Value\": [\"/content/*.txt\"]\n\t\t},\n\t\t{\n\t\t\t\"Type\": \"GoalToCall\",\n\t\t\t\"Name\": \"goalToCall\",\n\t\t\t\"Value\": \"!GenerateHtmlFiles\"\n\t\t},\n\t\t{\n\t\t\t\"Type\": \"Boolean\",\n\t\t\t\"Name\": \"listenForFileChange\",\n\t\t\t\"Value\": true\n\t\t}\n\t]\n}\n```"
   },
   "RunOnBuild": false
 }

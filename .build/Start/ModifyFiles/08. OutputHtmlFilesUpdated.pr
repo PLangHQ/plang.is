@@ -5,7 +5,7 @@
       {
         "Type": "Object",
         "Name": "content",
-        "Value": "css file updated"
+        "Value": "html files updated"
       },
       {
         "Type": "Boolean",
@@ -25,7 +25,7 @@
     ],
     "ReturnValues": null
   },
-  "Text": "write out 'css file updated'",
+  "Text": "write out 'html files updated'",
   "Reload": false,
   "LlmRequest": {
     "temperature": 0.0,
@@ -64,14 +64,14 @@
         "content": [
           {
             "type": "text",
-            "text": "write out 'css file updated'"
+            "text": "write out 'html files updated'"
           }
         ]
       }
     ],
     "type": "PLang.Modules.GenericFunctionBuilder",
     "caching": true,
-    "RawResponse": "```json\n{\n\t\"FunctionName\": \"Write\",\n\t\"Parameters\": [{\n\t\t\"Type\": \"Object\",\n\t\t\"Name\": \"content\",\n\t\t\"Value\": \"css file updated\"\n\t}, {\n\t\t\"Type\": \"Boolean\",\n\t\t\"Name\": \"writeToBuffer\",\n\t\t\"Value\": false\n\t}, {\n\t\t\"Type\": \"String\",\n\t\t\"Name\": \"type\",\n\t\t\"Value\": \"text\"\n\t}, {\n\t\t\"Type\": \"Int32\",\n\t\t\"Name\": \"statusCode\",\n\t\t\"Value\": 200\n\t}],\n\t\"ReturnValues\": null\n}\n```"
+    "RawResponse": "```json\n{\n\t\"FunctionName\": \"Write\",\n\t\"Parameters\": [{\n\t\t\"Type\": \"Object\",\n\t\t\"Name\": \"content\",\n\t\t\"Value\": \"html files updated\"\n\t}, {\n\t\t\"Type\": \"Boolean\",\n\t\t\"Name\": \"writeToBuffer\",\n\t\t\"Value\": false\n\t}, {\n\t\t\"Type\": \"String\",\n\t\t\"Name\": \"type\",\n\t\t\"Value\": \"text\"\n\t}, {\n\t\t\"Type\": \"Int32\",\n\t\t\"Name\": \"statusCode\",\n\t\t\"Value\": 200\n\t}],\n\t\"ReturnValues\": null\n}\n```"
   },
   "RunOnBuild": false
 }
